@@ -23,7 +23,7 @@ class GCLRegex:
     docket_us_patterns = [(r"\d+(?:-\d+)?", "")]
     docket_clean_patterns = r"(?:(?<=^)|(?<=,))(?: +)?(?:(?:C\.?A|D(?:[oc]+)?ke?ts?|MDL| +|Case|Crim|Civ)+(?:il|inal)?(?:(?:Action|CV|A|[. ])+)?)?((?:C\.A|Nos?)\.:?)(?: )?"
     patent_number_pattern = r"(?:(?:re|pp|d|ai|x|h|t)?(?:[ -]+)?\d{1,2} ?\-?[,./;] ?\-?)?(?:(?:re|pp|d|ai|x|h|t)(?:[ -]+)?\d{2,3}|\d{3}) ?\-?[,./;] ?\-?\d{3}(?: ?ai)?\b"
-    patent_reference_patterns = r'(?:the|["`\'#’]+) ?(\d{3,4}) ?(?:[Aa]pplication|[Pp]atent)\b|(?:[Aa]pplication|[Pp]atent)\b +["`\'#’]+(\d{3,4})'
+    patent_reference_patterns = r'(?:the|[\(\[]?["`\'#’]+[\)\]]?) ?(\d{3,4}) ?(?:[Aa]pplication|[Pp]atent)\b|(?:[Aa]pplication|[Pp]atent)\b +[\(\[]?["`\'#’]+[\)\]]?(\d{3,4})'
     special_patent_ref_patterns = [
         (r'(\((?:collectively,?)?(?:\s+)?(?:the\s+)?"(?:[\w\' ]+)?patent(s)?"\))', "")
     ]
